@@ -2,10 +2,12 @@
 A FiveM script that allows you to upload videos, image and audio files directly to the server. It also allows you to access the files.
 
 ## Installation
-1. Download the script and rename it from `lb-upload-master` to `lb-upload`.
-2. Place it in your resources folder.
+1. Download the script and rename it from `lb-upload-master` to `lb-upload`
+2. Place it in your resources folder
 3. Add `ensure lb-upload` to your server.cfg
-4. Configure the script (see below).
+4. Make sure you have [Node.js](https://nodejs.org/en/download) installed
+5. Open lb-upload in your CMD and run `npm i`
+6. Configure the script (see below)
 
 ## Configuration
 Open the `options.js` file and configure to your liking. Make sure to set a port and change the IP-address to your server's IP-address. Also make sure to change the IP-address in the url.
