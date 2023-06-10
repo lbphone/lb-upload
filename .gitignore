@@ -1,0 +1,8 @@
+node_modules
+
+uploads/**
+!uploads/.gitkeep
+
+.yarn.installed
+pnpm-lock.yaml
+yarn.lock
