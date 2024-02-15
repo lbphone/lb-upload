@@ -30399,12 +30399,12 @@ setTimeout(() => {
 var resourceName = GetCurrentResourceName();
 var resourcePath = GetResourcePath(resourceName);
 var uploadPath = config.UploadPath.replace("RESOURCE_PATH", resourcePath);
-var baseUrl = `https://${GetConvar("web_baseUrl", "")}/${resourceName}`;
-function isIpConnected(ip) {
+var baseUrl = null;
+function isIpConnected(ipToCheck) {
   for (let i2 = 0; i2 < GetNumPlayerIndices(); i2++) {
     const source = GetPlayerFromIndex(i2);
-    const ip2 = GetPlayerEndpoint(source);
-    if (ip2 === ip2) {
+    const ip = GetPlayerEndpoint(source);
+    if (ipToCheck === ip) {
       return true;
     }
   }
@@ -30445,6 +30445,9 @@ router.post("", upload.single("file"), (ctx) => {
     ctx.status = 403;
     ctx.body = "Not connected to FiveM server";
     return;
+  }
+  if (!baseUrl) {
+    baseUrl = `https://${GetConvar("web_baseUrl", "")}/${resourceName}`;
   }
   const filename = `${v4_default()}.${extension}`;
   const link = `${baseUrl}/uploads/${filename}`;
