@@ -1,0 +1,6 @@
+{
+	"compilerOptions": {
+		"types": ["node", "@citizenfx/server"],
+		"esModuleInterop": true
+	}
+}

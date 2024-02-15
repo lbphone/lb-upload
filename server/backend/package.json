@@ -1,0 +1,44 @@
+{
+	"name": "lb-upload",
+	"version": "2.0.0",
+	"type": "module",
+	"scripts": {
+		"build": "esbuild server.ts --bundle --platform=node --target=node14 --outfile=dist/index.js --external:@babel/preset-typescript/package.json --external:@babel/plugin-transform-modules-commonjs --external:@babel/plugin-proposal-export-namespace-from",
+		"watch": "pnpm build --watch"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"@citizenfx/http-wrapper": "^0.2.2",
+		"@koa/bodyparser": "^5.0.0",
+		"@koa/multer": "^3.0.2",
+		"@koa/router": "^12.0.1",
+		"fix-esm": "^1.0.1",
+		"koa": "^2.15.0",
+		"koa-send": "^5.0.1",
+		"mime": "^4.0.1",
+		"multer": "1.4.5-lts.1",
+		"node-fetch": "^3.3.2",
+		"typescript": "^5.3.3",
+		"uuid": "^9.0.0"
+	},
+	"devDependencies": {
+		"@citizenfx/server": "2.0.7436-1",
+		"@types/koa": "^2.14.0",
+		"@types/koa-send": "^4.1.6",
+		"@types/koa__multer": "^2.0.7",
+		"@types/koa__router": "^12.0.4",
+		"@types/node": "^20.11.17",
+		"@types/uuid": "^9.0.8",
+		"esbuild": "0.20.0"
+	},
+	"prettier": {
+		"tabWidth": 4,
+		"singleQuote": true,
+		"printWidth": 140,
+		"semi": false,
+		"quoteProps": "preserve",
+		"trailingComma": "none"
+	}
+}

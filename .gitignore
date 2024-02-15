@@ -1,8 +1,6 @@
-node_modules
+server/previousUrl.txt
+server/backend/node_modules
+server/backend/pnpm-lock.yaml
 
 uploads/**
 !uploads/.gitkeep
-
-.yarn.installed
-pnpm-lock.yaml
-yarn.lock
