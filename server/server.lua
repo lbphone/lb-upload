@@ -6,6 +6,8 @@ if not Config.AutoReplace then
 	return
 end
 
+Wait(5000) -- Wait so that web_baseUrl can be set in convars
+
 local baseUrl = ("https://%s/%s"):format(GetConvar("web_baseUrl", ""), GetCurrentResourceName())
 local previousUrl = LoadResourceFile(GetCurrentResourceName(), "server/previousUrl.txt")
 
