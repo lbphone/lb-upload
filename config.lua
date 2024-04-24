@@ -41,6 +41,7 @@ Config.Limits.Mimes = { -- set to false to allow uploading any file types
 	"audio/ogg",
 	"audio/opus",
 	"audio/webm",
+	"audio/mp3",
 
 	"video/mp4",
 	"video/webm",
